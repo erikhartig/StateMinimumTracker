@@ -1,0 +1,1 @@
+You need to add a text file called HMACSecretKey.txt to this file.  It needs to contain a 32 byte cryptographically secure secret key that is encoded in base 64.

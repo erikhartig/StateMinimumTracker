@@ -1,3 +1,5 @@
 *~
 node_modules
 *.swp
+password.txt
+controllers/keys/HMACSecretKey.txt
