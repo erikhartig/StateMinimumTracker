@@ -84,7 +84,7 @@ exports.parseData = function(inputStr) {
           "basePrice": split[6],
           "licenseePrice": split[7],
           "minimumShelfPrice": split[8],
-          "new/change": split[9]
+          "newChange": split[9]
         };
         ret.push(data);
       } else if (split.length == 10 && split[0] == "MI"){
@@ -115,7 +115,7 @@ exports.parseData = function(inputStr) {
           "basePrice": split[7],
           "licenseePrice": split[8],
           "minimumShelfPrice": split[9],
-          "new/change": split[10]
+          "newChange": split[10]
         };
         ret.push(data);
       }else if (split.length == 1){//sets alcoholType
