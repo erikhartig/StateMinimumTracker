@@ -4,8 +4,6 @@ const sjcl = require('sjcl');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 
-var text = fs.readFileSync("./07_29_18_PRICE_BOOK_627422_7.csv");
-
 /*
   Helper function that returns true if a single character that is a capital or lower
   case letter is given.
@@ -29,7 +27,7 @@ exports.parseData = function(inputStr) {
     if (line.charAt(0) == ',' && line.charAt(1) == ',' && line.charAt(2) == ',') {//checks to see if line contains three consecutive commas, if so it is a useless filler line, so ignore.
       continue;
     }
-    else if (line.charAt(0) != null) {//checks to make sure line isn't null
+    else if (line != null && line.charAt(0) != null) {//checks to make sure line isn't null
       var name;
       if (line.includes("\"")) {//checks to see if the line contains any quotation marks, these would indicate sections that contain commas that need to be pulled out before splitting.
         name = line.match(/(["'])(?:(?=(\\?))\2.)*?\1/g);//regex selects all items enclosed by quotation marks.  Returns array containing all of the elements enclosed in quotation marks.
@@ -129,6 +127,3 @@ exports.parseData = function(inputStr) {
   }
   return ret;
 }
-
-
-console.log(exports.parseData(text));
