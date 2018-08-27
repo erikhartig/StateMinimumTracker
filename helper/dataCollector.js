@@ -15,6 +15,7 @@ var con = mysql.createConnection({
   database: "statemin"
 });
 
+//TODO: under construction
 function postAlcohol(alcohol){
   console.log(alcohol[0]);
   let sql = "INSERT into alcohol (alcoholType, michiganDistiller, ADAnum, liquorCode, brandName, iquorCode, brandName,  proof, sizeML, packSize, basePrice, licenseePrice, minimumShelfPrice, newChange) VALUES (??, ??, ??, ??, ??, ??, ??, ??, ??, ??, ??, ??, ??, ??);";
